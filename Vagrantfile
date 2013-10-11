@@ -1,6 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+#Install following and do VagrantUp
+#http://www.vagrantup.com/
+#https://www.virtualbox.org/wiki/Downloads
+
 Vagrant.configure("2") do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
@@ -16,7 +20,7 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.network :forwarded_port, guest: 80, host: 9881
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -37,13 +41,12 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  config.vm.provider :virtualbox do |vb|
-     # Don't boot with headless mode
-     vb.gui = true
-
-     # Use VBoxManage to customize the VM. For example to change memory:
-     # ivb.customize ["modifyvm", :id, "--memory", "1024"]
-  end
+  # config.vm.provider :virtualbox do |vb|
+  #   # Don't boot with headless mode
+  #   vb.gui = true
+  #   # Use VBoxManage to customize the VM. For example to change memory:
+  #   # ivb.customize ["modifyvm", :id, "--memory", "1024"]
+  #end
   #
   # View the documentation for the provider you're using for more
   # information on available options.
@@ -83,7 +86,7 @@ Vagrant.configure("2") do |config|
      chef.add_recipe "nginx"
      #chef.add_role "web"
      # You may also specify custom JSON attributes:
-     chef.json = { :ngnix_port => "9000" }
+     chef.json = { :ngnix_port => "80" }
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
