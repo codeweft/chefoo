@@ -1,13 +1,5 @@
-#
-# Cookbook Name:: nginx
+# Cookbook Name:: configure
 # Recipe:: default
-#
-# Copyright 2013, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
-
-package 'nginx'
 
 common = {:worker_processes => 4, :port => 9999, :conf => "/etc/nginx/nginx.conf"}
 

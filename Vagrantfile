@@ -35,7 +35,8 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder ".", "/chefoo"
+  #config.vm.synced_folder ".", "/chefoo"
+  config.vm.synced_folder "../", "/source"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -79,12 +80,13 @@ Vagrant.configure("2") do |config|
   # some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-     chef.cookbooks_path = "./chef-repo/cookbooks"
-     chef.roles_path = "./chef-repo/roles"
-     chef.data_bags_path = "./chef-repo/data_bags"
+     chef.cookbooks_path = "./cookbooks"
+     chef.roles_path = "./roles"
+     #chef.data_bags_path = "./data_bags"
      chef.add_recipe "apt"
-     chef.add_recipe "nginx"
-     #chef.add_role "web"
+     chef.add_recipe "deploy"
+     chef.add_recipe "configure"
+     chef.add_role "web"
      # You may also specify custom JSON attributes:
      chef.json = { :ngnix_port => "80" }
   end
