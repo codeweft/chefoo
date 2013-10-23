@@ -78,11 +78,11 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
-  #
+  # http://workstuff.tumblr.com/post/50911984233/some-tips-on-getting-started-with-vagrant-and-chef
   config.vm.provision :chef_solo do |chef|
-     chef.cookbooks_path = "./cookbooks"
-     chef.roles_path = "./roles"
-     #chef.data_bags_path = "./data_bags"
+     chef.cookbooks_path = "cookbooks"
+     chef.roles_path = "roles"
+     #chef.data_bags_path = "data_bags"
      chef.add_recipe "apt"
      chef.add_recipe "deploy"
      chef.add_recipe "configure"
