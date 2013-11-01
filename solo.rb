@@ -1,5 +1,6 @@
 cookbook_path [
-  "/source/cookbooks",
+  '/source/cookbooks',
+  '~/.berkshelf/cookbooks/'
 ]
 environment_path "/source/environments"
 role_path "/source/roles"
