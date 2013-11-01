@@ -1,5 +1,6 @@
 cookbook_path [
-  '/source/.vendor/cookbooks'
+  '/source/.vendor/cookbooks',
+  '/source/cookbooks'
 ]
 environment_path "/source/environments"
 role_path "/source/roles"
