@@ -3,3 +3,7 @@ site :opscode
 cookbook 'nginx'
 cookbook 'apt'
 cookbook 'vim'
+cookbook 'ruby'
+cookbook 'janus', git: 'https://github.com/pwelch/chef-janus.git'
+cookbook 'git'
+cookbook 'bundler'

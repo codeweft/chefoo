@@ -9,6 +9,20 @@
     "vim": {
       "locked_version": "1.0.2"
     },
+    "ruby": {
+      "locked_version": "0.9.2"
+    },
+    "janus": {
+      "locked_version": "0.0.3",
+      "git": "https://github.com/pwelch/chef-janus.git",
+      "ref": "1a64a15f9607f2c29c634310e76268dbc1fbe022"
+    },
+    "git": {
+      "locked_version": "2.7.0"
+    },
+    "bundler": {
+      "locked_version": "0.2.0"
+    },
     "bluepill": {
       "locked_version": "2.3.0"
     },
@@ -26,6 +40,18 @@
     },
     "yum": {
       "locked_version": "2.4.0"
+    },
+    "dmg": {
+      "locked_version": "2.0.4"
+    },
+    "windows": {
+      "locked_version": "1.11.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "rubygems": {
+      "locked_version": "0.3.0"
     }
   }
 }
