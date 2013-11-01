@@ -1,5 +1,0 @@
-site :opscode
-
-cookbook 'nginx'
-cookbook 'apt'
-cookbook 'vim'
