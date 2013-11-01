@@ -1,9 +1,9 @@
 {
-  "name": "web",
+  "name": "dev",
   "default_attributes": { },
   "override_attributes": { },
   "json_class": "Chef::Role",
-  "description": "This is just a test role, no big deal.",
+  "description": "This is role to enable development infrastructure",
   "chef_type": "role",
   "run_list": [ "recipe[nginx]" ]
 }
