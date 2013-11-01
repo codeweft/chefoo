@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision :shell do |shell|
-    shell.inline = "chef-solo -c /source/solo.rb"
+    shell.inline = "chef-solo -c /source/solo.rb -j /source/run_list.json"
   end
   # http://workstuff.tumblr.com/post/50911984233/some-tips-on-getting-started-with-vagrant-and-chef
   #config.vm.provision :chef_solo do |chef|
