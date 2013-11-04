@@ -1,6 +1,7 @@
 site :opscode
 
 cookbook 'nginx'
+cookbook 'berkshelf'
 cookbook 'apt'
 cookbook 'vim'
 cookbook 'ruby'

@@ -5,5 +5,5 @@
   "json_class": "Chef::Role",
   "description": "This is role to enable development infrastructure",
   "chef_type": "role",
-  "run_list": [ "recipe[apt]", "recipe[berkshelf]", "recipe[nginx]", "recipe[vim]", "recipe[janus]", "recipe[ruby]", "recipe[bundler]" ]
+  "run_list": [ "recipe[apt]", "recipe[nginx]", "recipe[vim]", "recipe[janus]", "recipe[ruby]", "recipe[bundler]" ]
 }
