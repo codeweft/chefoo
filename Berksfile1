@@ -10,3 +10,6 @@ cookbook 'git'
 cookbook 'bundler'
 cookbook 'postgresql'
 cookbook 'rails'
+cookbook 'heroku'
+cookbook 'nodejs'
+#cookbook 'chef-server'   #https://wiki.opscode.com/display/chef10/Installing+Chef+Server+on+Debian+or+Ubuntu+using+Packages
