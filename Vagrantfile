@@ -20,6 +20,9 @@ Vagrant.configure("2") do |config|
   vb.gui = false
   vb.customize ["modifyvm", :id, "--memory", "1024"]
  end
+ config.vm.provision :shell,
+    #if there a line that only consists of 'mesg n' in /root/.profile, replace it with 'tty -s && mesg n'
+    :inline => "(grep -q -E '^mesg n$' /root/.profile && sed -i 's/^mesg n$/tty -s \\&\\& mesg n/g' /root/.profile && echo 'Ignore the previous error about stdin not being a tty. Fixing it now...') || exit 0;"
  config.vm.provision :shell, :inline => <<-PROVISION
     cd /source
     bundle install
