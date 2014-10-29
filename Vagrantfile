@@ -10,8 +10,7 @@
 #vagrant plugin install vagrant-omnibus
 
 Vagrant.configure("2") do |config|
- config.vm.box = "ubuntu-13.04-mini-i386.box"
- config.vm.box_url = "https://dl.dropboxusercontent.com/u/4387941/vagrant-boxes/ubuntu-13.04-mini-i386.box"
+ config.vm.box = "cryptogates/ubuntu-14.04-chef-ruby-java"
  config.vm.network :forwarded_port, guest: 80, host: 9881
  config.vm.network :private_network, ip: "192.168.33.10"
  # config.vm.network :public_network
@@ -23,10 +22,9 @@ Vagrant.configure("2") do |config|
  end
  config.vm.provision :shell, :inline => <<-PROVISION
     cd /source
+    bundle install
     gem install berkshelf
     berks install --path /source/.vendor/cookbooks/
     chef-solo -c /source/solo.rb -j /source/run_list.json
-    cd /projects/billu
-    bundle install
  PROVISION
 end
