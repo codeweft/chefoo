@@ -24,10 +24,12 @@ Vagrant.configure("2") do |config|
     #if there a line that only consists of 'mesg n' in /root/.profile, replace it with 'tty -s && mesg n'
     :inline => "(grep -q -E '^mesg n$' /root/.profile && sed -i 's/^mesg n$/tty -s \\&\\& mesg n/g' /root/.profile && echo 'Ignore the previous error about stdin not being a tty. Fixing it now...') || exit 0;"
  config.vm.provision :shell, :inline => <<-PROVISION
-    cd /source
-    bundle install
-    gem install berkshelf
-    berks install --path /source/.vendor/cookbooks/
-    chef-solo -c /source/solo.rb -j /source/run_list.json
+ 	 curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+ 	 sudo docker run -i -t ubuntu /bin/bash
+#    cd /source
+#    bundle install
+#    gem install berkshelf
+#    berks install --path /source/.vendor/cookbooks/
+#    chef-solo -c /source/solo.rb -j /source/run_list.json
  PROVISION
 end
