@@ -6,7 +6,6 @@
   "description": "This is role to enable development infrastructure",
   "chef_type": "role",
   "run_list": [
-    "recipe[configure]",
     "recipe[heroku]",
     "recipe[vim]",
     "recipe[janus]"
