@@ -1,7 +1,8 @@
+ssl_verify_mode :verify_peer
 cookbook_path [
-  '/source/.vendor/cookbooks',
-  '/source/cookbooks'
+  '/devopscode/chefoo/berks-cookbooks',
+  '/devopscode/chefoo/cookbooks'
 ]
-environment_path "/source/environments"
-role_path "/source/roles"
+environment_path "/devopscode/chefoo/environments"
+role_path "/devopscode/chefoo/roles"
 verbose_logging true

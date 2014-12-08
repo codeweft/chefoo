@@ -1,15 +1,11 @@
-site :opscode
+source "https://supermarket.chef.io"
 
-cookbook 'nginx'
-cookbook 'berkshelf'
-cookbook 'apt'
 cookbook 'vim'
-cookbook 'ruby'
 cookbook 'janus', git: 'https://github.com/pwelch/chef-janus.git'
-cookbook 'git'
-cookbook 'bundler'
+cookbook 'heroku'
+#cookbook 'nodejs'
+cookbook 'nginx'
 cookbook 'postgresql'
 cookbook 'rails'
-cookbook 'heroku'
-cookbook 'nodejs'
-#cookbook 'chef-server'   #https://wiki.opscode.com/display/chef10/Installing+Chef+Server+on+Debian+or+Ubuntu+using+Packages
+cookbook 'build-essential'
+cookbook 'database', :git => 'git://github.com/manuelvanrijn/cookbook-database.git', :ref => 'grant-roles'
